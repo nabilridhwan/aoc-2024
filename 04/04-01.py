@@ -8,6 +8,8 @@ with open("./puzzle-inputs/04.txt") as f:
     lines = [list(l.strip()) for l in f.readlines()]
 
 
+print(lines)
+
 while line_index < len(lines):
     line = lines[line_index]
     char_position = 0
@@ -86,16 +88,16 @@ while line_index < len(lines):
             
 
 
-            print(f"forward {forward}")
-            print(f"backward {backward}")
-            print(f"up {up}")
-            print(f"down {down}")
+            # print(f"forward {forward}")
+            # print(f"backward {backward}")
+            # print(f"up {up}")
+            # print(f"down {down}")
 
-            print(f"diag_right_up {diag_right_up}")
-            print(f"diag_right_down {diag_right_down}")
+            # print(f"diag_right_up {diag_right_up}")
+            # print(f"diag_right_down {diag_right_down}")
 
-            print(f"diag_left_up {diag_left_up}")
-            print(f"diag_left_down {diag_left_down}")
+            # print(f"diag_left_up {diag_left_up}")
+            # print(f"diag_left_down {diag_left_down}")
 
             if ''.join(forward) == "XMAS":
                 found += 1
@@ -122,8 +124,8 @@ while line_index < len(lines):
                 found += 1
 
         char_position += 1
-    print('---')
-    print(f"found {found}")
+    # print('---')
+    # print(f"found {found}")
     # print(found_indexes)
-    print('---')
+    # print('---')
     line_index += 1
