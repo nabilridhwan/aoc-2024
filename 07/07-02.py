@@ -2,7 +2,7 @@ lines = []
 lines_2 = []
 from itertools import product
 
-# Only used and experimented with itertools.product from this video and then figured my way through to the solution after testing what itertools.product
+# Only used and experimented with itertools.product from this video and then figured my way through to the solution after testing what itertools.product does
 # https://www.youtube.com/watch?v=wRof9uV6GBA
 
 # Parse
@@ -27,6 +27,9 @@ def test(combo, test_value, nums):
         if instructions == "*":
             idx += 1
             ans *= nums[idx]
+        elif instructions == "|":
+            idx +=1
+            ans = int(f"{ans}{nums[idx]}")
         else:
             idx +=1
             ans += nums[idx]
@@ -46,7 +49,7 @@ for item in lines:
     # ('+', '*')
     # ('+', '+')
 
-    for combo in product("*+", repeat=len(nums)-1):
+    for combo in product("*+|", repeat=len(nums)-1):
         # print(combo)
         if(test(combo, test_value, nums)):
             print(test_value, nums, combo)
